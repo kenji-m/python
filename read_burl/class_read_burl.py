@@ -37,8 +37,8 @@ class ReadBurl():
             
             dates.append ( datetime(year, month, day, hour, minute) )
             pressure.append ( float(data[12]) )
-            u_wind.append ( float(data[6]) * np.sin(float(data[5])*np.pi/180)*-1)
-            v_wind.append ( float(data[6]) * np.cos(float(data[5])*np.pi/180)*-1)
+            u_wind.append ( -(float(data[6])) * np.sin(float(data[5])*np.pi/180) )
+            v_wind.append ( -(float(data[6])) * np.cos(float(data[5])*np.pi/180) )
 
         dates = np.array (dates)
         pressure = np.array(pressure)
